@@ -3,7 +3,7 @@ import sys
 class Solution:
 
     def reverseInt(self, num):
-        if num > 
+        
         negative = False
         if num < 0:
             negative = True

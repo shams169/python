@@ -32,7 +32,7 @@ class Solution(object):
         print(s1, s2)
         
         for i, c in enumerate(s1):
-            print(i,c)
+            #print(i,c)
             if c != s2[i]:
                 return s1[:i] #stop until hit the split index
         return s1
@@ -43,11 +43,11 @@ class Solution(object):
 
 
 def main():
-    #input = ["flower","flow","flight"]
-    input = ["dog","racecar","car"]
+    input = ["flower","flow","flight"]
+    #input = ["dog","racecar","car"]
     obj = Solution()
     
-    #print(obj.longestCommonPrefix(input))
+    print(obj.longestCommonPrefix(input))
     print(obj.faster(input))
 
  
