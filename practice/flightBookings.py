@@ -17,7 +17,7 @@ def flightBookings(data):
     return result
     
 
-
+0
 
 def main():
     print(flightBookings([[1,2,10], [2,3,20],[2,5,25]]))

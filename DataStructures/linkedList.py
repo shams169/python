@@ -247,7 +247,25 @@ class LinkedList:
         #     x.next = x.next.next
 
 
-        
+    def swapNodeInPairs(self):
+        d1 = d = Node(0)
+        d.next= self.head
+
+        while d.next and d.next.next:
+            p = d.next
+            q = d.next.next
+
+            d.next = q
+            p.next = q.next
+            q.next = p
+
+            d = p
+        self.head = d1.next
+        self.printNodes()
+
+
+
+    
             
 
 
@@ -258,14 +276,15 @@ def main():
     llist = LinkedList()
     llist.appendNode(Node(1))
     llist.appendNode(Node(2))
-    # llist.appendNode(Node(3))
-    # llist.appendNode(Node(4))
+    llist.appendNode(Node(3))
+    llist.appendNode(Node(4))
     # llist.appendNode(Node(5))
+    llist.swapNodeInPairs()
     llist.printNodes()
-    llist.removeNthNodeFromEnd(2)
+    #llist.removeNthNodeFromEnd(2)
     
     
-    llist.printNodes()
+    #llist.printNodes()
     #llist.removeDuplicates()
     #llist.printNodes()
     #llist.insertAt(0, Node(5))
